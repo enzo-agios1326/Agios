@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agios – Récupère les frais bancaires prélevés à tort</title>
+<meta name="description" content="Envoie ton relevé : tu reçois en 24 h tes frais bancaires repérés sur 12 mois, comparés aux plafonds légaux, et ton courrier de réclamation prêt à envoyer. 19 €, satisfait ou remboursé.">
+<meta name="theme-color" content="#123B2E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Agios – Récupère les frais bancaires prélevés à tort">
+<meta property="og:description" content="Tes frais bancaires repérés, comparés aux plafonds légaux, et ton courrier de réclamation prêt. 19 €, satisfait ou remboursé.">
+<style>
+:root{--sapin:#123B2E;--jaune:#FFD43B;--encre:#14201B;--gris:#5B665F;--fond:#FBFBF8;--filet:#DCDFD8;--serif:"Iowan Old Style","Palatino Linotype",Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font:17px/1.55 var(--sans);color:var(--encre);background:var(--fond);padding-bottom:84px}
+main,footer,.bar div{max-width:640px;margin:0 auto;padding-inline:20px}
+h1,h2{font-family:var(--serif);line-height:1.12;letter-spacing:-.01em}
+h1{font-size:2.15rem;font-weight:800;margin:28px 0 14px}
+h2{font-size:1.5rem;font-weight:700;margin-bottom:12px}
+p{margin-bottom:12px}
+section{padding:28px 0;border-top:1px solid var(--filet)}
+.lead{font-size:1.1rem}
+.marque{color:var(--sapin);font-weight:800;font-size:1.15rem;padding-top:18px;font-family:var(--serif)}
+.btn{display:block;background:var(--sapin);color:#fff;text-align:center;text-decoration:none;font-weight:700;font-size:1.1rem;padding:17px 20px;border-radius:10px;min-height:56px}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--jaune);outline-offset:2px}
+.note{font-size:.9rem;color:var(--gris);margin-top:8px;text-align:center}
+.releve{background:#fff;border:1px solid var(--filet);border-radius:6px;padding:14px;margin:22px 0 6px;font:13.5px/1.9 ui-monospace,Menlo,Consolas,monospace;overflow-x:auto}
+.releve div{display:flex;justify-content:space-between;gap:12px;white-space:nowrap}
+.releve .f span:first-child{background:var(--jaune);padding:0 4px}
+.releve .t{border-top:1px solid var(--encre);margin-top:6px;padding-top:6px;font-weight:700}
+.cap{font-size:.85rem;color:var(--gris)}
+ol,ul{padding-left:1.2rem;margin-bottom:12px}
+li{margin-bottom:8px}
+.garantie{background:var(--sapin);color:#fff;border-radius:10px;padding:20px;margin:6px 0 16px}
+.garantie h2{color:#fff}
+.garantie a{color:var(--jaune)}
+.prix{font-family:var(--serif);font-size:3rem;font-weight:800;line-height:1}
+details{border-top:1px solid var(--filet);padding:14px 0}
+summary{font-weight:700;cursor:pointer;list-style:none;padding-right:24px;position:relative}
+summary::after{content:"+";position:absolute;right:0}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0;color:var(--gris)}
+footer{padding-block:28px;font-size:.9rem;color:var(--gris);border-top:1px solid var(--filet)}
+footer a{color:var(--gris);margin-right:14px}
+.bar{position:fixed;inset:auto 0 0 0;background:var(--fond);border-top:1px solid var(--filet);padding:10px 0 calc(10px + env(safe-area-inset-bottom))}
+.bar div{padding-block:0}
+@media(min-width:700px){h1{font-size:2.8rem}.bar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<main>
+<p class="marque">Agios</p>
+
+<h1>Ta banque t’a prélevé des frais en trop ? Récupère-les.</h1>
+<p class="lead">Envoie ton relevé. Sous 24 h, tu reçois tes frais repérés sur 12 mois, comparés aux plafonds légaux, et ton courrier de réclamation prêt à envoyer.</p>
+<a class="btn" href="https://buy.stripe.com/test_3cI9ATfot0hVgQocHo6g800">Récupérer mes frais – 19 €</a>
+<p class="note">Paiement unique. Satisfait ou remboursé 14 jours.</p>
+
+<div class="releve" role="img" aria-label="Exemple de relevé bancaire avec les lignes de frais surlignées">
+<div><span>03/09 Prélèvement assurance</span><span>−42,00</span></div>
+<div class="f"><span>05/09 Commission d’intervention</span><span>−8,00</span></div>
+<div class="f"><span>05/09 Commission d’intervention</span><span>−8,00</span></div>
+<div class="f"><span>12/09 Frais de rejet prélèvement</span><span>−20,00</span></div>
+<div class="f"><span>18/09 Option alertes SMS</span><span>−3,50</span></div>
+<div class="t"><span>Frais repérés</span><span>39,50</span></div>
+</div>
+<p class="cap">Exemple fictif. Tes lignes de frais, on les repère à ta place.</p>
+
+<section>
+<h2>Des petites lignes, un vrai total</h2>
+<p>Commissions d’intervention, frais de rejet, options que tu n’utilises pas : ils arrivent par petites lignes illisibles. La commission d’intervention est plafonnée à 8 € par opération et 80 € par mois, et à 4 € et 20 € si ta banque t’a classé en clientèle fragile. Presque personne ne vérifie.</p>
+<p>Il suffit de deux ou trois commissions récupérées pour amortir ton dossier à 19 €.</p>
+</section>
+
+<section>
+<h2>Ce que tu reçois</h2>
+<ul>
+<li><strong>Tes frais repérés</strong> : toutes les lignes de frais de ton relevé, sur 12 mois.</li>
+<li><strong>Le total comparé aux plafonds légaux</strong> : tu vois ce qui dépasse.</li>
+<li><strong>Ton courrier de réclamation</strong> : prêt à envoyer, adressé à ton agence.</li>
+</ul>
+</section>
+
+<section>
+<h2>Comment ça marche</h2>
+<ol>
+<li>Tu paies 19 € une seule fois.</li>
+<li>Tu envoies ton relevé par email, en PDF ou en photo.</li>
+<li>Tu reçois ton dossier sous 24 h.</li>
+</ol>
+</section>
+
+<section>
+<div class="garantie">
+<h2>Satisfait ou remboursé, 14 jours</h2>
+<p>Pas convaincu ? Écris à <a href="mailto:agios.dossier@gmail.com">agios.dossier@gmail.com</a> dans les 14 jours. Tu es remboursé sous 5 jours ouvrés, sans justification.</p>
+</div>
+<p class="prix">19 €</p>
+<p>Paiement unique, sans abonnement. Soit moins que deux ou trois commissions d’intervention.</p>
+<a class="btn" href="https://buy.stripe.com/test_3cI9ATfot0hVgQocHo6g800">Récupérer mes frais – 19 €</a>
+<p class="note">Sans engagement, rien à résilier.</p>
+</section>
+
+<section>
+<h2>Questions fréquentes</h2>
+<details><summary>Est-ce que ça marche pour mon cas ?</summary><p>Oui si tu es client d’une banque en France, particulier ou petite structure, et que ton relevé est lisible. Si on ne trouve aucun frais contestable, tu es remboursé.</p></details>
+<details><summary>Combien de temps ça me prend ?</summary><p>Environ 3 minutes pour payer et envoyer ton relevé. Ton dossier arrive sous 24 h.</p></details>
+<details><summary>Et si je veux arrêter ?</summary><p>Il n’y a rien à arrêter : c’est un paiement unique. Et tu peux demander le remboursement pendant 14 jours.</p></details>
+<details><summary>À quoi sert ce que je paie ?</summary><p>À l’analyse de ton relevé, au calcul de ce qui dépasse les plafonds et à la rédaction de ton courrier. Ton relevé n’est utilisé que pour ton dossier, puis supprimé sous 30 jours.</p></details>
+</section>
+</main>
+
+<footer>
+<a href="/mentions-legales.html">Mentions légales</a><a href="/cgv.html">CGV</a><a href="/confidentialite.html">Confidentialité</a>
+</footer>
+
+<div class="bar"><div><a class="btn" href="https://buy.stripe.com/test_3cI9ATfot0hVgQocHo6g800">Récupérer mes frais – 19 €</a></div></div>
+</body>
+</html>
